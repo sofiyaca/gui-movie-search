@@ -19,6 +19,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -32,6 +37,10 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.1",
+    "pretty-quick": "^3.0.0"
   }
 }
