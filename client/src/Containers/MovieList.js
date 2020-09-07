@@ -5,7 +5,7 @@ import "./MovieList.scss";
 export default function MovieList({ movies }) {
   return (
     <div className="MovieList">
-      <h2>You Movie Search Results</h2>
+      <h2 className="MovieList-title">Your Search Results</h2>
       {movies.length > 0 ? (
         <div>
           {movies.map((movie) => (

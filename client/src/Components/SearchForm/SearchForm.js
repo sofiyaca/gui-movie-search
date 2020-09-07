@@ -32,7 +32,9 @@ export default function SearchBox({
   return (
     <div className="SearchForm">
       <form onSubmit={handleSearchSubmit}>
-        <label htmlFor="movie-search">Search for a movie:</label>
+        <label htmlFor="movie-search" className="SearchForm-label">
+          Search for a movie:
+        </label>
         <input
           type="text"
           id="movie-search"
@@ -40,8 +42,11 @@ export default function SearchBox({
           aria-label="Type a word to search for movie titles"
           value={inputValue}
           onChange={handleInputValue}
+          className="SearchForm-input"
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="SearchForm-button">
+          Search
+        </button>
       </form>
     </div>
   );

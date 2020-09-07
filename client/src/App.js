@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ApiClient from "./Services/ApiClient";
 import MovieList from "./Containers/MovieList";
-import SearchBox from "./Components/SearchForm/SearchForm";
+import SearchForm from "./Components/SearchForm/SearchForm";
 import History from "./Components/History/History";
 import "./App.scss";
 
@@ -32,8 +32,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to Movie Search</h1>
-      <SearchBox
+      <h1 className="App-title">Welcome to Movie Search</h1>
+      <SearchForm
         setSearchTerm={setSearchTerm}
         searchHistory={searchHistory}
         setSearchHistory={setSearchHistory}

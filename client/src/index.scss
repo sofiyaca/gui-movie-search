@@ -1,3 +1,5 @@
+$color-grey-dark: #777;
+
 // global reset
 *,
 *::before,
@@ -14,4 +16,9 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
 }

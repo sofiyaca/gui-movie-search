@@ -7,9 +7,11 @@ export default function History({ searchHistory }) {
   );
   console.log("Recent history", recentHistory);
   return (
-    <div>
-      <label htmlFor="history-select">Your recent searches:</label>
-      <select name="movies" id="history-select">
+    <div className="History">
+      <label className="History-label" htmlFor="history-select">
+        Your recent searches:
+      </label>
+      <select className="History-select" name="movies" id="history-select">
         {recentHistory.map((searchTerm) => (
           <option value={searchTerm} key={searchTerm}>
             {searchTerm}
