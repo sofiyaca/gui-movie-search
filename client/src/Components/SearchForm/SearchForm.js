@@ -19,12 +19,10 @@ export default function SearchBox({
     if (inputValue) {
       setSearchTerm(inputValue);
       // Update search history
-      console.log("INPUT VALUE", [...searchHistory, inputValue]);
       setSearchHistory([...searchHistory, inputValue]);
 
       // Update local storage history when a new search term is added
       let stringifiedHistory = JSON.stringify([...searchHistory, inputValue]);
-      console.log("HISTORY", stringifiedHistory);
       localStorage.setItem("history", stringifiedHistory);
     } else {
       alert("Please add some text to the search box");
