@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./SearchForm.scss";
 
-export default function SearchBox({ setSearchTerm }) {
+export default function SearchBox({
+  setSearchTerm,
+  searchHistory,
+  setSearchHistory,
+}) {
   const [inputValue, setInputValue] = useState("");
 
   // Update the state of the input tag with it's value
@@ -14,6 +18,14 @@ export default function SearchBox({ setSearchTerm }) {
     event.preventDefault();
     if (inputValue) {
       setSearchTerm(inputValue);
+      // Update search history
+      console.log("INPUT VALUE", [...searchHistory, inputValue]);
+      setSearchHistory([...searchHistory, inputValue]);
+
+      // Update local storage history when a new search term is added
+      let stringifiedHistory = JSON.stringify([...searchHistory, inputValue]);
+      console.log("HISTORY", stringifiedHistory);
+      localStorage.setItem("history", stringifiedHistory);
     } else {
       alert("Please add some text to the search box");
     }
